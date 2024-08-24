@@ -79,14 +79,8 @@ infos
 - the ops is max when difference between n and m is maximum cause for s(m) to appear in x(n) n must be >= m.
 - and in each ops n becomes 2n 
 - so max ops are req when difference is max 
-- using 1<=n.m <= 25 we see diff is max when n=1 and m=25 
-- so
-
-
-
-
-- q is after how many ops s appears as substring in x;
-- now the worst or critical case is when n is smalles and m is largest i.e.
+- using 1<=n.m <= 25 we see diff is max when n=1(min) and m=25 (max)
+- this is the worst or critical case is when n is smallest and m is largest i.e.
 - n=1 and hence m=25;
 
 - say x='a';
