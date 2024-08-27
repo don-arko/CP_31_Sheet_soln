@@ -79,6 +79,8 @@ then take 2, otherwise take 3. Then take (⌊n2⌋−1) twos. You can see that a
 Overall complexity: O(n) per testcase.
 
 
+//For a same logic/idea more clean code refer the editorial
+
 */
 void solve() {
     int n, k,x;
