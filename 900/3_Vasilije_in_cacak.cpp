@@ -87,7 +87,8 @@ Explaination
 -The bound are very cleer that the lower bound of sum is the sum of the first k natural elements and the upper bound is the sum of last k elements from 1 to n
 -Later it was observed that we can always pick k elements to form all then sum from low to high by chosing k distinct elements .
 - if we get a sum s by chosing k= 3 elements (a1,a2,a3) say then it was observed that s+1 is always attainable by replacing any a[i], by a[i]+1 i.e a[i] and
-a[i]+1 both are not included initially within the 3 chosen elementes. This observation form the very basis the proof that all sums from low to high are formable 
+a[i]+1 both are not included initially within the 3 chosen elementes. This observation form the very basis the proof that all sums from low to high are formable,
+after reading this line refer prood for the editorial it would be very much understandable.
 ----Do see the proof very very very important 
 */
 
