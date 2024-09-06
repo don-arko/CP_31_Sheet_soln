@@ -63,8 +63,8 @@ Editorial
 Let's remember under what conditions we can rearrange the letters of a word to form a palindrome. 
 This can be done if the number of letters with odd occurrences is not greater than 1 .
 
-In our problem, it is sufficient to check that the number of letters with odd occurrences (denoted as x
-) is not greater than k+1. Let's prove this fact.
+In our problem, it is sufficient to check that the number of letters with odd occurrences (denoted as x) is
+not greater than k+1. Let's prove this fact.
 
 If x>k+1, then it is definitely impossible to obtain the answer, because with k operations we cannot make 
 the number of letters with odd occurrences not greater than 1. On the other hand, we can simply remove the 
@@ -92,8 +92,18 @@ Now , finally x should be atmost 1 so that palindromic re-arrangement is possibl
 now x f = x i -k <=1 i.e. x-k<=1 or x <= k+1 for palindromic re-arrangement to be possible or  else it is not possible 
 
 
+---------------------------------------------------------------------------------
+The last two lines of the editorial carries lot more info than it seems
 
 
+we have x  and after k ops we want to reduce it to 1 or 0 so we are saying that x-k<=1.(x<=k+1) so if lhs yield 1 or 0 its ok but what we get -1,-2 0r -3 and so on 
+i.e is it fair to say that x<=k+1 or x-k<=1 will always make x=1 or 0 and never x>1 where palindromic reaarragemenet is not possible, the ans is yes if we use 
+the ops / removals optimally 
+
+Supoose k > x i.e. x-k = -ve then for the first x operations we we remove only chars whose  frequency is odd so that then they have even frequencies and x reduces to 0
+and thenafter for the remaining (k-x) operations/removals we remove chars such that x ocsilates between 0 and 1 , so finally depending upon the parity of (k-x) x will be 1 or 0 and never >1
+
+so for x<=k+1, always palindromic re-arrangement is possible if we remove chars optimally 
 
 */
 
