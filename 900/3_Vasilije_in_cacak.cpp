@@ -89,7 +89,11 @@ Explaination
 - if we get a sum s by chosing k= 3 elements (a1,a2,a3) say then it was observed that s+1 is always attainable by replacing any a[i], by a[i]+1 i.e a[i] and
 a[i]+1 both are not included initially within the 3 chosen elementes. This observation form the very basis the proof that all sums from low to high are formable,
 after reading this line refer prood for the editorial it would be very much understandable.
-----Do see the proof very very very important 
+----Do see the proof very very very important and beautiful.
+
+
+
+
 */
 
 
