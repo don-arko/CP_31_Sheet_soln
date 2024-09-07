@@ -65,11 +65,12 @@ element should be less than the third element, and so on, so the corresponding s
 
 So, the answer is at least m+1, where m is the length of the longest segment of the string that consists of equal characters. Can we construct 
 the array a which will contain exactly m+1 distinct values? It turns out we can do it with the following greedy algorithm: let's use integers from 0
- to m for our array a, and let's construct it from left to right; every time we place an element, we choose either the largest possible integer
- we can use (if the next character is >) or the smallest possible integer we can use (if the next character is <). For example, for the 
+ to m (m+1 distinct element )for our array a, and let's construct it from left to right; every time we place an element, we choose either the largest possible integer 0
+ we can use (if the next character is >) or the smallest possible integer 0 we can use (if the next character is <). For example, for the 
  string <><<<>, the first 6 elements of the array will be [0,3,0,1,2,3] (and we can use any integer from 0 to 2 in the last position). 
  That way, whenever a segment of equal characters begins, the current value in the array will be either m or 0, and we will be able to
- decrease or increase it m times, so we won't arrive at a situation where, for example, the current value is 0 and we have to find a smaller integer.
+ decrease or increase it m times, so we won't arrive at a situation where, for example, the current value is 0 and we have to find a smaller integer. i.e. always we see 
+ we wont be able to use more distinct integes then the m+1 we have chosen so using atleast m+1 distinct integers converges to exactly m+1 distinct integers
 
 So, the problem basically reduces to finding the longest contiguous subsegment of equal characters in s
 .
