@@ -74,13 +74,30 @@ Memory complexity: O(1) per test case.
 
 Explaination 
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -Aim is to maximise the time elapsed 
 This is a greedy idea , idea is to delay the use of each tool as long as possible , so that the wastage in time due to the upper bound 'a'
 can be minimised and it would be optimal to use all the available tools none shall be skipped because we want to maximise the time
 - Mind the usage at 1 us only to avoid the wastage due to the upper bound 'a' , if we can ensure that there is no wastage at any other c>1 we can use the tool at that c
 and the time elased is again maximised only . But using c =1 is the constant greedy idea of a unit step , which could be implemented now also if xi is sufficiently large that no matter at 
 what c you use xi there will be wastage then c=1 will minimise the wastage due to the upper bound . So using the tools at c=1 is the ultimate greedy tactics
+
+-Refer Rohit class 38 explained this q beautifully with the help of graphs n all
+
+So the idea is to minimise the wastage (in order to maximise the time elapsed) so for the that we should delay the time c=k at which we are triggering the tool i.e. we are maximising the vertical distance between
+the lines c=a and c=k  (two lines parallet to x axis, where a is const but k can me minimised the increse the distance between the lines c=a and c=k) so that any xi can possible be accommodated within the distance a-k , so when this distance a- k is max the wastage is mimnimised , like is some xi is > max a-k then the extra xi above max a-k will always be wasted we cant help it 
+
+so we want max a-k or min k , here k is the time when any tool is to be triggered .
+so k min=1 sec cant  minimise beyond that then at k=1 bomb will explode
+
+so the after triggering the ith tool at ci=k min =1 sec (so that a-k is maximised to minimise wastage due to upper bound a) 
+     cf=min(k+xi,a)  where k=1
+     gain due to tool i delta t= cf -ci = min(1+xi,a)-1=min(xi,a-1);  a-k min or a-1  is the maximum gain that is possible due to the upper bound a, and for any xi grater than max gain , there will be for sure some wastage
+
+     so finally time elapsed = b +  ∑gains = b+∑min(xi,a-1)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 eg;
 
 a=10
