@@ -78,7 +78,9 @@ Explaination
 -Aim is to maximise the time elapsed 
 This is a greedy idea , idea is to delay the use of each tool as long as possible , so that the wastage in time due to the upper bound 'a'
 can be minimised and it would be optimal to use all the available tools none shall be skipped because we want to maximise the time
-
+- Mind the usage at 1 us only to avoid the wastage due to the upper bound 'a' , if we can ensure that there is no wastage at any other c>1 we can use the tool at that c
+and the time elased is again maximised only . But using c =1 is the constant greedy idea of a unit step , which could be implemented now also if xi is sufficiently large that no matter at 
+what c you use xi there will be wastage then c=1 will minimise the wastage due to the upper bound . So using the tools at c=1 is the ultimate greedy tactics
 eg;
 
 a=10
