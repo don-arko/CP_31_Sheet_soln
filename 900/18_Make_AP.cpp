@@ -84,7 +84,7 @@ void solve() {
     //bug(a,b,c);
     //trying to change c to mc ; mc>=c i.e. m>=1 (cause m has to be a positive integer -> m starts from 1 ) and mc/c= m (<- I) 
         //a and b are in AP
-    //using seperate blocks so as to reuse variables with same names
+        //using seperate blocks so as to reuse variables with same names
     {
         int d=b-a;
         //bug(d);
@@ -101,6 +101,7 @@ void solve() {
     //cout<<"outside first if\n";
 
     //trying to change b to mb
+    //a and c are in AP
     {
         int d_2 = c-a;
         //bug(d_2);
@@ -120,7 +121,7 @@ void solve() {
 
 
     //trying to change a to ma ; ma>=a i.e. m>=1
-        //a and b are in AP
+        //b and c are in AP
     int d=c-b;
 
     int a_=b-d;
