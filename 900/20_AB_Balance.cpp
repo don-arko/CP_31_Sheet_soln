@@ -71,6 +71,29 @@ or sn and get the desired string.
 
 (It also can be proved that if s1≠sn then AB(s)≠BA(s))
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Observation 
+It is observed that whenever s[0]=s[n-1] AB(s) = BA(s)  or BA(s) = AB(s)
+                                         _        _        _        _     these underscores shall help to get the observation
+
+eg 
+a_a   :- now no matter what u put in between AB(S) will always be equal to BA(S) if put b
+     a b a 
+     ___     AB(s)=1
+      ____   BA(s)=1
+
+     a a a 
+     ___     AB(s)=0
+      ____   BA(s)=0
+
+
+This observation can also be proved  read the editorial for the proof
+
+So when s[0] is equal to s[n-1] then Always AB(s)==BA(s) so we keep s unchanged 
+else we make s[0] equal to s[n-1] in one operation 
+      
+
+
 */
 
 const int N = 200005;
