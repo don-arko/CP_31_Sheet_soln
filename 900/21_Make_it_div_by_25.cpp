@@ -58,12 +58,26 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 /*
 
 Editorial
-A number is divisible by 25
- if and only if its last two digits represent one of the following strings: "00", "25", "50", "75".
+A number is divisible by 25 if and only if its last two digits represent one of the following strings: "00", "25", "50", "75".
 
-Let's solve for each string the following subtask: what is the minimum number of characters to be deleted so that the string becomes a suffix of the number. Then, choosing the minimum of the answers for all subtasks, we solve the whole problem.
+Let's solve for each string the following subtask: what is the minimum number of characters to be deleted 
+so that the string becomes a suffix of the number. Then, choosing the minimum of the answers for all
+subtasks, we solve the whole problem.
 
-Let's solve the subtask for a string "X Y" where 'X' and 'Y' are digits. We can do it using the following algorithm: let's delete the last digit of the number until it is equal to 'Y', then the second to last digit of the number until it is equal to 'X'. If it is not possible, then this subtask has no solution (i.e. its result will not affect the answer).
+Let's solve the subtask for a string "X Y" where 'X' and 'Y' are digits. We can do it using the following 
+algorithm: let's delete the last digit of the number until it is equal to 'Y', then the second to last digit of the number 
+until it is equal to 'X'. If it is not possible, then this subtask has no solution (i.e. its result will not affect the answer).
+
+One Doubt Resolution: Why should we delete last and second last , first of all this is a brute force approach now since we need 
+to make the suffix of the string as XY i.e. very  "last" of the string should be XY in order to be divisible by 25 , the intitution is 
+we need to modify the last the places so that they become XY so deletion at any other place wont modify the last two places it would remain unaltered 
+so we should delete elemets from the last . and the order should be last and then second last so that , because by contradiction method if we do it otherwise
+then the last place never gets options to make it equal to Y , but we we do it last then second last then both the places gets to see options at first the last 
+place is set then we start deleting fromm the second last position 
+
+In Implementation we actually doesnt delete elements but we move idx forward and count the number of deletion required to reach the final 
+states s[idx]=Y and then s[idx]=X and if these states cant be reached then for that subtask no solution exists and we should return +infinity so as the keep the original
+answer unaffected.
 */
 
 const int N = 200005;
@@ -80,8 +94,8 @@ int subtask(string s, string t){
     //but if we cannot make s[idx]==t[1] on or before idx>=1
     //then at worst case idx=1 and s[idx]!=s[1] and while loop gets execute in this case making i-- and ops ++but we are beyond search space here we should stop.. so here final value of i while exiting while loop is 0 
     while(s[idx]!=t[1] and idx>=1){
-        idx--;
-        ops++;
+        idx--;     //moving idx ahead means we need one deletion
+        ops++;     //hence ops ++
     }
 
     //so if idx<1 or idx becomes 0 it means we have exhausted the seach space and we cannot make s[idx]== t[1] and hence we do not have a valid ans hence we should return INT_MAX so the it doesnt affect the original ans
