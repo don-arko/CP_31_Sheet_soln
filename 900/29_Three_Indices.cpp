@@ -59,6 +59,38 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 
 /*
 There are three approaches in total.
+
+First:- Most Eficient one O(n)
+ 
+Since this array is a permutation , all the elements are distinct so for all i the relation between a[i] and a[i+1] is
+1.a[i]<a[i+1]
+2.a[i]>a[i+1] 
+these are the only two possibilies
+
+while going from i=0 -> i<n-1 if only relation 1 occurs than array is strictly increasing and if only 2 occurs array is stricly decreasing.
+
+If peak element exists in the array i.e. for  i<j<k in the array a[i]<a[j] and a[j]>a[k]
+My claim is : if peak exists then always one such i,j,k exist which are consecutive 
+(non consecutive i,j,k may or may not exist but existence of consecutive i,j,k is more fundamental just 
+visualise the peak as mountain range you would realise the fact).Proof is if at any i peak exists 
+then a[i-1] < a[i] and a[i]>a[i+1](from visualisation of peak)  . So i=i-1, j=i and k=i+1 are consecutive
+
+So look for such i ; a[i-1]<a[i] and a[i]>a[i+1] and the i is out ans.
+
+
+
+
+Second Approach :- Prefix Min array and Suffix max aray
+
+
+Bad Me jururat parein to youtube video dekhke sikh lena
+
+
+
+Third Aprroach: 2 nested for loop 
+
+Useless just brute force appraoch
+
 */
 
 
