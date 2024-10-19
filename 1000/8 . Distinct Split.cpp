@@ -110,7 +110,7 @@ void solve() {
         l=aux.size();
 
         m[s[i]]--;
-        //frequncy zero matlab wo element delete kr do jo map apne se nei karega
+        //frequncy zero matlab wo element delete kr do jo map apne se nei karega , so that size of the map give us the no. of distinct chars.
         if(m[s[i]]==0){
             m.erase(s[i]);
         }
