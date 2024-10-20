@@ -72,6 +72,7 @@ conditions between the two positions, we should change l=ai−x,r=ai+x, and add 
 
 Explaination of editorial.
 
+Idea was that as long as the ranges for  the a[i]s are having a common intersection we can always chose a optimal v , and when intersection was null we need to change our v
 Idea is to find the intersection of valid ranges of v for each of a[i] , as long as they are having a common intersection we dont need to change our v(we optimally chose such v)
 the moment the intersection is NULL we have to change our v, hence ans++ and then again we set the range of v for this a[i] and again go on for checking interestion of the range of v.
 
