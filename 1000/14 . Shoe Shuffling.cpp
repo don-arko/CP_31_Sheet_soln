@@ -111,7 +111,7 @@ void solve() {
     for(int i=1;i<n;i++){
         if(a[i]==a[i-1]){
             count++;
-            swap(b[i],b[i-1]); // technically only swapping students who have same shoe size so that the student who conmes left never gets a show of lower size.
+            swap(b[i],b[i-1]); // technically only swapping students who have same shoe size so that the student who conmes left never gets a shoe of lower size.
         }
         else{
             if(count==1){
