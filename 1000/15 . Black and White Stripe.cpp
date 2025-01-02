@@ -90,7 +90,7 @@ void solve() {
     int ans = INT_MAX;
 
     //1 based Indexing
-    // 1st Subarray of size k ends and kth index and as we move the slot the last sub-array of size k ends at nth index
+    // 1st Subarray of size k ends at kth index and as we move the slot the last sub-array of size k ends at nth index
     // and total there are n-k+1 sub-arrays of size k.
     //we iterate through all of them.
     for(int i= k ; i<=n;i++){ 
