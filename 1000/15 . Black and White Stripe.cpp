@@ -96,11 +96,18 @@ void solve() {
     for(int i= k ; i<=n;i++){ 
         ans=min(ans,w[i]-w[i-k]); 
         //i      : represents the end index of the current subarray 
-        //i-k    : represents the end index of the prev subarray
+        //i-k    : represents the index of one less than the start index of the current subarray , start index being i-k+1. (reverse calculation from r-l+1=k => l=r-k+1   just r=i is used )
         //w[i]   : total w chars till ith index : last index of the current subarray
-        //w[i-k] : total w chars till  the last of the prev sub-array
+        //w[i-k] : total w chars before the start of the current sub-array.
         //w[i]-w[i-k] : gives the no. of w chars in the range i-k+1(starting index of the curr subarray) to ith index (end of the current sub-array)
         //so basically this gives the no. of w chars in the current sub-array.
+
+         //1st ------- (i-k)|(i-k+1)---------ith 
+         //           w[i-k]                w[i]
+         //---------------->
+         //------------------------------------>
+         //                 ------------------->    (cuurent sub-array)
+         //                    w[i]-w[i-k]
     }
     cout<<ans<<endl;
 }
