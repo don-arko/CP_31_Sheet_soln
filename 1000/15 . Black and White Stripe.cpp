@@ -84,7 +84,7 @@ void solve() {
     //w[i] = no. of 'W' chars till the ith index(1 based Indexing)
     vector<int> w(n+1); // creates a vector of size n+1 (1 based indexing (handy for creating prefix sum creation)) witih all values 0
     for(int i=1;i<=n;i++){
-        w[i] = w[i-1]+(s[i-1]=='W'); //adds one if the condition is true i.e. if the char is 'W' also s in based so mapping is i->i-1 instead of i->i.
+        w[i] = w[i-1]+(s[i-1]=='W'); //adds one if the condition is true i.e. if the char is 'W' also s in based so mapping  w->s: is i->i-1 instead of i->i.
     }
 
     int ans = INT_MAX;
